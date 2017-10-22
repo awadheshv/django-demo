@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+  dependencies = [
+    ('profiles', '0001_initial'),
+  ]
 
-    dependencies = [
-        ('profiles', '0001_initial'),
-    ]
-
-    operations = [
-        migrations.AddField(
-            model_name='profile',
-            name='location',
-            field=models.CharField(default='my location default', max_length=120),
-        ),
-    ]
+  operations = [
+    migrations.AddField(
+      model_name='profile',
+      name='location',
+      field=models.CharField(default='my location default', max_length=120),
+    ),
+  ]
